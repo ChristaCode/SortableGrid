@@ -1,0 +1,93 @@
+<!-- public/index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+
+    <title>Starter Node and Angular</title>
+
+    <!-- JQUERY -->
+    <script src="C:/Users/Christa/OneDrive/VotedTrump/jquery-3.1.1.min.js"></script>
+
+    <!-- LIST -->
+<script src="http://listjs.com/assets/javascripts/list.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="C:/Users/Christa/OneDrive/VotedTrump/public/css/style.css" /> <!-- custom styles -->
+
+    <!-- JS -->
+    <script src="C:/Users/Christa/OneDrive/VotedTrump/public/libs/angular/angular.min.js"></script>
+    <script src="C:/Users/Christa/OneDrive/VotedTrump/public/libs/angular-route/angular-route.min.js"></script>
+
+    <!-- ANGULAR CUSTOM -->
+    <script src="C:/Users/Christa/OneDrive/VotedTrump/public/js/controllers/MainCtrl.js"></script>
+    <script src="C:/Users/Christa/OneDrive/VotedTrump/public/js/controllers/NerdCtrl.js"></script>
+    <script src="C:/Users/Christa/OneDrive/VotedTrump/public/js/services/NerdService.js"></script>
+    <script src="C:/Users/Christa/OneDrive/VotedTrump/public/js/appRoutes.js"></script>
+    <script src="C:/Users/Christa/OneDrive/VotedTrump/public/js/app.js"></script>
+    <script src="C:/Users/Christa/OneDrive/VotedTrump/public/js/list.min.js"></script>
+    <script src="C:/Users/Christa/OneDrive/VotedTrump/public/js/list.min.js"></script>
+    <script>
+var options = {
+  valueNames: [ 'name', 'born' ]
+};
+
+var userList = new List('users', options);
+    </script>
+</head>
+<body ng-app="sampleApp" ng-controller="NerdController">
+
+<p>Index2</p>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <nav class="navbar navbar-inverse">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">Stencil: Node and Angular</a>
+        </div>
+
+        <!-- LINK TO OUR PAGES. ANGULAR HANDLES THE ROUTING HERE -->
+        <ul class="nav navbar-nav">
+            <li><a href="/nerds">Nerds</a></li>
+        </ul>
+
+    </nav>
+
+    <!-- ANGULAR DYNAMIC CONTENT -->
+    <div ng-view></div>
+
+</div>
+
+    <!-- Test List -->
+<div id="users">
+  <input class="search" placeholder="Search" />
+  <button class="sort" data-sort="name">
+    Sort by name
+  </button>
+
+  <ul class="list">
+    <li>
+      <h3 class="name">Jonny Stromberg</h3>
+      <p class="born">1986</p>
+    </li>
+    <li>
+      <h3 class="name">Jonas Arnklint</h3>
+      <p class="born">1985</p>
+    </li>
+    <li>
+      <h3 class="name">Martina Elm</h3>
+      <p class="born">1986</p>
+    </li>
+    <li>
+      <h3 class="name">Gustaf Lindqvist</h3>
+      <p class="born">1983</p>
+    </li>
+  </ul>
+
+</div>
+
+</body>
+</html>
