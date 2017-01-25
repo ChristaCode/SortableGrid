@@ -16,13 +16,8 @@ var port = process.env.PORT || 8080;
 
 // connect to our mongoDB database 
 // (uncomment after you enter in your own credentials in config/db.js)
-var mongoose = require('mongoose').Mongoose;
- mongoose.connect(db.url); 
-
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function() {
-  // we're connected!
-});
+//var mongoose = require('mongoose').Mongoose;
+ //mongoose.connect(db.url); 
  
 // get all data/stuff of the body (POST) parameters
 // parse application/json 
